@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <strong>Novo Cadastro</strong>
+        </div>
+        <div class="card-body">
+        <form [formGroup]="formTeste">
+            {{ formTeste.value | json }}
+              <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" formControlName="nome" id="nome">
+            </div>
+            <div class="form-group">
+                <label for="Telefone">Telefone</label>
+                <input type="text" class="form-control" formControlName="telefone" id="telefone">
+            </div>
+            <div class="form-group">
+                <label for="cpf">CPF</label>
+                <input type="text" class="form-control" id="cpf" formControlName="cpf">
+            </div>
+            <div class="form-group">
+                <label for="email">Email </label>
+                <input type="email" class="form-control" id="email" formControlName="email" aria-describedby="emailHelp" placeholder="Digite o seu e-mail">
+                <small id="emailHelp" class="form-text text-muted">Nós nunca vamos compartilhar seu e-mail com mais ninguém.
+                </small>
+            </div>
+            <div class="form-group">
+                    <label for="dataNascimeto">Data Nascimento</label>
+                    <input type="date" class="form-control" id="dataNascimeto" formControlName="dataNascimento" placeholder="Data de Nascimento">
+            </div>
+            <div formGroupName="endereco">
+                <div class="form-group">
+                    <label for="text">Logradouro</label>
+                    <input type="text" class="form-control" formControlName="logradouro" id="logradouro">
+                </div>
+                <div class="form-group">
+                    <label for="text">Numero</label>
+                    <input type="text" class="form-control" formControlName="numero" id="numero">
+                </div>
+                <div class="form-group">
+                    <label for="text">CEP</label>
+                    <input type="text" class="form-control" formControlName="cep" id="cep">
+                </div>
+                <div class="form-group">
+                    <label for="text">Cidade</label>
+                    <input type="text" class="form-control" formControlName="cidade" id="cidade">
+                </div>
+                <div class="form-group">
+                    <label for="text">Estado</label>
+                    <input type="text" class="form-control" formControlName="estado" id="estado">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="cadastrar()">Enviar</button>
+        </form>
+    </div>
+  </div>
+</div>

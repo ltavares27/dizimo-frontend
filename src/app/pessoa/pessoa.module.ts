@@ -1,3 +1,4 @@
+import { ReactiveFormsModule } from '@angular/forms';
 import { PessoaRoutingModule } from './pessoa-routing.module';
 
 import { NgModule } from '@angular/core';
@@ -14,7 +15,8 @@ import { PessoaService } from './pessoa.service';
   ],
   imports: [
     CommonModule,
-    PessoaRoutingModule
+    PessoaRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [
     PessoaService
