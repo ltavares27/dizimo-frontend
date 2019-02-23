@@ -7,11 +7,13 @@ import { CommonModule } from '@angular/common';
 import { ListarComponent } from './listar/listar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { PessoaService } from './pessoa.service';
+import { DetalheComponent } from './detalhe/detalhe.component';
 
 @NgModule({
   declarations: [
     CadastrarComponent,
-    ListarComponent
+    ListarComponent,
+    DetalheComponent
   ],
   imports: [
     CommonModule,

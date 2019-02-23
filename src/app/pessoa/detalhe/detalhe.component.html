@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="card">
+      <div class="card-header">
+          <strong>Detalhes Cadastro</strong>
+      </div>
+      <div class="card-body">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" class="form-control" disabled value="{{pessoa.nome}}" id="nome">
+          </div>
+          <div class="form-group">
+              <label for="Telefone">Telefone</label>
+              <input type="text" class="form-control" disabled value="{{pessoa.telefone}}" id="telefone">
+          </div>
+          <div class="form-group">
+              <label for="cpf">CPF</label>
+              <input type="text" class="form-control" id="cpf" disabled value="{{pessoa.cpf}}">
+          </div>
+          <div class="form-group">
+              <label for="email">Email </label>
+              <input type="text" class="form-control" id="email" disabled value="{{pessoa.email}}">
+         </div>
+          <div class="form-group">
+                  <label for="dataNascimeto">Data Nascimento</label>
+                  <input type="date" class="form-control" id="dataNascimeto" disabled value="{{pessoa.dataNascimento}}">
+          </div>
+              <div class="form-group">
+                  <label for="text">Logradouro</label>
+                  <input type="text" class="form-control" disabled value="{{pessoa.endereco?.logradouro}}" id="logradouro">
+              </div>
+              <div class="form-group">
+                  <label for="text">Numero</label>
+                  <input type="text" class="form-control" disabled value="{{pessoa.endereco?.numero}}" id="numero">
+              </div>
+              <div class="form-group">
+                  <label for="text">CEP</label>
+                  <input type="text" class="form-control" disabled value="{{pessoa.endereco?.cep}}" id="cep">
+              </div>
+              <div class="form-group">
+                  <label for="text">Cidade</label>
+                  <input type="text" class="form-control" disabled value="{{pessoa.endereco?.cidade}}" id="cidade">
+              </div>
+              <div class="form-group">
+                  <label for="text">Estado</label>
+                  <input type="text" class="form-control" disabled value="{{pessoa.endereco?.estado}}" id="estado">
+              </div>
+              <button class="btn btn-secondary" (click)="goBack()">Voltar</button>
+  </div>
+</div>
+</div>

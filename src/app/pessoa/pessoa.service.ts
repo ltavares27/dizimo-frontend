@@ -9,7 +9,6 @@ import { catchError } from 'rxjs/operators';
 
 @Injectable()
 export class PessoaService {
-
   constructor(private http: HttpClient) {}
   urlApi = 'https://dizimo-app.herokuapp.com/';
 
@@ -23,5 +22,10 @@ export class PessoaService {
     const urlBuscarTodos = this.urlApi + 'pessoas/list';
     return this.http.get<Pessoa[]>(urlBuscarTodos);
       //.pipe(catchError(null)); aqui da pra capturar erro
+  }
+  getPessoa(id: number): Observable<Pessoa> {
+    const urlDetalhe = this.urlApi + 'pessoas/get/' + id;
+    return this.http.get<Pessoa>(urlDetalhe);
+    //throw new Error("Method not implemented.");
   }
 }
