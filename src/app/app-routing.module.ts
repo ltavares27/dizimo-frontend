@@ -3,8 +3,15 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'pessoa', pathMatch: 'full' },
-  { path:'pessoa', component: CommonComponent, loadChildren: './pessoa/pessoa.module#PessoaModule'}
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', loadChildren: './login/login.module#LoginModule' },
+  {
+    path: '',
+    component: CommonComponent,
+    children: [
+      {path: 'pessoa', loadChildren: './pessoa/pessoa.module#PessoaModule'}
+    ]
+  }
 ];
 
 @NgModule({
