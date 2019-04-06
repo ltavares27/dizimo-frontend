@@ -32,4 +32,7 @@ export class ListarComponent implements OnInit {
       });
   }
 
+  cancelarCadastro() {
+    console.log('Cancelar');
+  }
 }

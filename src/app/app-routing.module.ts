@@ -1,3 +1,4 @@
+import { AuthGuard } from './shared/auth-guard/auth-guard';
 import { CommonComponent } from './common/common.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -8,6 +9,7 @@ const routes: Routes = [
   {
     path: '',
     component: CommonComponent,
+    canActivate: [AuthGuard],
     children: [
       {path: 'pessoa', loadChildren: './pessoa/pessoa.module#PessoaModule'}
     ]

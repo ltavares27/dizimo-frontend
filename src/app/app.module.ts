@@ -1,3 +1,5 @@
+import { LoginService } from './login/login.service';
+import { AuthGuard } from './shared/auth-guard/auth-guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -22,7 +24,10 @@ import { CommonComponent } from './common/common.component';
     HttpClientModule,
     SharedModule
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    LoginService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
